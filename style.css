@@ -266,20 +266,18 @@ body {
 }
 
 .Informacoes {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     padding: 40px 20px;
     max-width: 1500px;
     margin: 0 auto;
-    flex-wrap: wrap;
 }
 
 .cardInformacoes {
     background: white;
     border-radius: 10px;
     padding: 25px;
-    width: 400px;
     text-align: center;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     border-top: 4px solid #c8102e;
@@ -438,8 +436,8 @@ body {
         height: 400px;
     }
 
-    .cardInformacoes {
-        width: calc(50% - 20px);
+    .Informacoes {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .video-title {
@@ -465,9 +463,10 @@ body {
         font-size: 16px;
     }
 
-    .cardInformacoes {
-        width: 100%;
-        max-width: 300px;
+    .Informacoes {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 20px 15px;
     }
 
     .video-section {
