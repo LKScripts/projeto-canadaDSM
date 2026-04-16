@@ -22,128 +22,101 @@ body {
     background: var(--bg-page);
     min-height: 100vh;
     color: var(--text);
-    padding-top: 80px;
 }
 
-.hero {
-    position: relative;
+/* ── Hero Carousel ── */
+#hero {
+    margin-top: 0;
+    padding: 0;
+}
+
+#heroCarousel,
+#heroCarousel .carousel-inner,
+#heroCarousel .carousel-item {
     height: 100vh;
-    width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
-        url("images/lake\ louise.jpg") no-repeat center center;
-    background-size: cover;
-    background-position: center top;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    text-align: center;
 }
 
-.heroContent {
-    position: relative;
-    z-index: 3;
-    max-width: 900px;
-    padding: 30px;
-    color: #ffffff;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
-    width: 100%;
+.heroSlide {
     height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
-.heroContent h1 {
+.heroOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.65) 100%);
+}
+
+.heroCaption {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--white);
+    padding: 0 24px;
+    max-width: 800px;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+}
+
+.heroCaption h1 {
     font-family: var(--font-display);
     font-size: clamp(36px, 6vw, 72px);
     font-weight: 900;
     line-height: 1.1;
-    padding: 0 0 24px 0;
+    margin-bottom: 16px;
     letter-spacing: -0.5px;
 }
 
-.heroContent p {
-    font-size: clamp(16px, 2vw, 20px);
-    line-height: 1.8;
-    max-width: 680px;
-    color: rgba(255,255,255,0.9);
+.heroCaption p {
+    font-size: clamp(15px, 2vw, 20px);
+    line-height: 1.7;
+    color: rgba(255,255,255,0.88);
+    margin: 0;
 }
 
-.background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+/* Carousel controls — bump size and position above the indicators */
+#heroCarousel .carousel-control-prev,
+#heroCarousel .carousel-control-next {
+    width: 56px;
+    opacity: 0.7;
 }
 
-.background img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+#heroCarousel .carousel-control-prev:hover,
+#heroCarousel .carousel-control-next:hover {
+    opacity: 1;
 }
 
-.scrollIndicator {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #ffffff;
-    font-size: 0.9rem;
-    z-index: 4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#heroCarousel .carousel-indicators {
+    margin-bottom: 28px;
 }
 
-.scrollIndicator span {
-    margin-bottom: 10px;
-    font-weight: 600px;
-    letter-spacing: 1px;
+#heroCarousel .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255,255,255,0.5);
+    margin: 0 5px;
 }
 
-.arrowDown {
-    position: absolute;
-    bottom: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    animation: bounce 2s infinite;
+#heroCarousel .carousel-indicators li.active {
+    background: var(--white);
 }
 
-.arrowDown svg {
-    width: 100%;
-    height: 100%;
-}
-
-.arrowDown path {
-    fill: #17c5e7;
-    stroke: #0d9bbb;
-}
-
-@keyframes titleGlow {
-    0% {
-        text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
-    }
-    100% {
-        text-shadow: 0 0 30px rgba(0, 212, 255, 0.7),
-            0 0 60px rgba(0, 212, 255, 0.4);
-    }
+/* ── Scrollspy active nav link ── */
+.navLinks .nav-item.active > .nav-link,
+.navLinks .nav-link.active {
+    color: var(--red);
+    border-bottom-color: var(--red);
 }
 
 @keyframes bounce {
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-10px); }
 }
 
 .navbar {
@@ -678,6 +651,223 @@ section {
 .copyright {
     font-size: 16px;
     color: rgba(255, 255, 255, 0.9);
+}
+
+/* ── Natureza: galeria de 3 imagens ── */
+.natGaleria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+}
+
+.natGaleriaItem {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+}
+
+.natGaleriaItem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.natGaleriaLabel {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 16px;
+    background: linear-gradient(to top, rgba(0,0,0,0.65), transparent);
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* ── Cidades: cards horizontais ── */
+.cidadesGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 40px clamp(20px, 5vw, 80px) 56px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.cidadeCard {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    padding: 28px 0;
+    border-bottom: 1px solid #e2eaf4;
+}
+
+.cidadeCard:last-child {
+    border-bottom: none;
+}
+
+.cidadeCard:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.cidadeCardImg {
+    flex: 0 0 260px;
+    height: 175px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cidadeCardImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.cidadeCardBody h3 {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 10px;
+    border-left: 4px solid var(--red);
+    padding-left: 12px;
+}
+
+.cidadeCardBody p {
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* ── Gastronomia: grid de 3 cards verticais ── */
+.gastroGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    padding-bottom: 56px;
+}
+
+.gastroCard {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #e2eaf4;
+}
+
+.gastroCard:last-child {
+    border-right: none;
+}
+
+.gastroCardImg {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+}
+
+.gastroCardImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gastroCardBody {
+    padding: 24px 28px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.gastroCardBody h3 {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 0;
+}
+
+.gastroCardBody p {
+    font-size: 14px;
+    line-height: 1.75;
+    color: var(--text-muted);
+    margin: 0;
+    flex: 1;
+}
+
+.gastroTag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: var(--red);
+    border: 1px solid var(--red);
+    border-radius: 20px;
+    padding: 3px 10px;
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+/* ── Responsivo: novos layouts ── */
+@media (max-width: 991px) {
+    .natGaleria {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cidadesGrid {
+        padding: 24px 20px 40px;
+    }
+
+    .cidadeCard,
+    .cidadeCard:nth-child(even) {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .cidadeCardImg {
+        flex: none;
+        width: 100%;
+        height: 200px;
+    }
+
+    .gastroGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .gastroCard {
+        border-right: none;
+        border-bottom: 1px solid #e2eaf4;
+        flex-direction: row;
+    }
+
+    .gastroCard:last-child {
+        border-bottom: none;
+    }
+
+    .gastroCardImg {
+        flex: 0 0 140px;
+        aspect-ratio: unset;
+        height: 140px;
+    }
+}
+
+@media (max-width: 600px) {
+    .natGaleria {
+        grid-template-columns: 1fr;
+    }
+
+    .gastroCard {
+        flex-direction: column;
+    }
+
+    .gastroCardImg {
+        flex: none;
+        width: 100%;
+        height: 200px;
+    }
 }
 
 /* Back to top button */

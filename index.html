@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body data-spy="scroll" data-target="#mainNav" data-offset="130">
+<body data-spy="scroll" data-target="#mainNav" data-offset="85">
 
     <!-- NAVBAR -->
     <nav id="mainNav" class="navbar navbar-expand-lg">
@@ -51,48 +51,81 @@
         </div>
     </nav>
 
-    <!-- SEÇÃO: HERO -->
+    <!-- SEÇÃO: HERO — Bootstrap Carousel -->
     <section id="hero">
-        <div class="hero">
-            <div class="heroContent">
-                <h1>Descubra a beleza do Canadá!</h1>
-                <p>Bem-vindo ao Canadá, onde o extraordinário faz parte do cotidiano. De auroras boreais que iluminam o
-                    céu
-                    do Norte a metrópoles vibrantes, esse país une paisagens deslumbrantes, diversidade cultural e
-                    hospitalidade calorosa. Aqui, a natureza exibe seus espetáculos mais impressionantes sem cerimônias,
-                    e cada viagem transforma-se em uma coleção de momentos inesquecíveis. Descubra o que faz desse país
-                    um lugar excepcional.</p>
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="5000">
+
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#heroCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#heroCarousel" data-slide-to="1"></li>
+                <li data-target="#heroCarousel" data-slide-to="2"></li>
+                <li data-target="#heroCarousel" data-slide-to="3"></li>
+                <li data-target="#heroCarousel" data-slide-to="4"></li>
+            </ol>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="heroSlide" style="background-image: url('images/banff.jpg');">
+                        <div class="heroOverlay"></div>
+                        <div class="heroCaption">
+                            <h1>Banff &amp; Lago Moraine</h1>
+                            <p>No coração das Montanhas Rochosas, lagos glaciais turquesa e picos imponentes formam uma das paisagens mais icônicas do mundo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="heroSlide" style="background-image: url('images/2022_MoraineLake_TravelAlberta_RothandRamberg (3).jpg');">
+                        <div class="heroOverlay"></div>
+                        <div class="heroCaption">
+                            <h1>Lago Moraine</h1>
+                            <p>Suas águas de um azul impossível, alimentadas pelo degelo das geleiras, tornam este lago um dos mais fotografados do planeta.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="heroSlide" style="background-image: url('images/niagara-falls-aerial-view-canadian-canada-146637444.webp');">
+                        <div class="heroOverlay"></div>
+                        <div class="heroCaption">
+                            <h1>Cataratas do Niágara</h1>
+                            <p>Uma das cachoeiras mais poderosas da Terra, na fronteira entre o Canadá e os Estados Unidos, atrai milhões de visitantes por ano.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="heroSlide" style="background-image: url('images/upper-town-winter-old-quebec-city-canada.avif');">
+                        <div class="heroOverlay"></div>
+                        <div class="heroCaption">
+                            <h1>Cidade Velha de Québec</h1>
+                            <p>A única cidade murada ao norte do México — Patrimônio da UNESCO, com ruas de paralelepípedos e arquitetura francesa intacta.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="heroSlide" style="background-image: url('images/vancouver-skyline-min.webp');">
+                        <div class="heroOverlay"></div>
+                        <div class="heroCaption">
+                            <h1>Vancouver</h1>
+                            <p>Eleita repetidamente uma das melhores cidades para se viver no mundo, com o Oceano Pacífico à frente e montanhas nevadas ao fundo.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <!-- Controls -->
+            <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
         </div>
     </section>
 
     <!-- SEÇÃO: SOBRE -->
     <section id="sobre">
-        <div class="informacoesCanadaContainer">
-            <div class="informacoesCanada" data-aos="fade-right">
-                <h2>Características Gerais</h2>
-                <p>O Canadá, localizado na América do Norte, é o segundo maior país do mundo em extensão
-                    territorial, com 9.985.000 km², fazendo fronteira terrestre apenas com os Estados Unidos
-                    (incluindo o Alasca) e banhado pelos oceanos Atlântico, Pacífico e Ártico
-                    <sup><a href="https://pt.wikipedia.org/wiki/Geografia_do_Canad%C3%A1">1</a></sup>. Sua capital,
-                    Ottawa, situa-se na província de Ontário, enquanto as cidades mais populosas são Toronto, Montreal
-                    e Vancouver <sup><a href="https://www.significados.com.br/canada/">2</a></sup>.
-                </p>
-                <p>A população, de aproximadamente 40,1 milhões de habitantes (2023), é marcada pela sua diversidade
-                    étnica incluindo os Métis, Primeiras Nações e Inuítes
-                    <sup><a href="https://hibonjour.com/cultura-do-canada-dicas/">3</a></sup>.
-                </p>
-                <p>O país adota o bilinguismo oficial (inglês e francês), com o francês concentrado principalmente em
-                    Quebec, e sua moeda é o dólar canadense (CAD)
-                    <sup><a href="https://mundoeducacao.uol.com.br/geografia/canada.htm">4</a></sup>.
-                </p>
-            </div>
-            <div class="imageContainer" data-aos="fade-left">
-                <img class="informacoesCanadaImg" src="images/1517857737_image1.jpeg"
-                    alt="Lake Louise em Banff National Park">
-            </div>
-        </div>
-
         <div class="videoSection" data-aos="fade-up">
             <div class="videoContainer">
                 <h2 class="videoTitle">Conheça o Canadá</h2>
@@ -214,17 +247,31 @@
         <h2 class="sectionTitle" data-aos="fade-up">Natureza</h2>
         <div class="informacoesCanadaContainer">
             <div class="informacoesCanada" data-aos="fade-right">
-                <h2>Natureza</h2>
+                <h2>Natureza Intocada</h2>
                 <p>O Canadá abriga 47 parques nacionais e uma imensidão selvagem, onde 90% do território é desabitado.
                     Com o maior litoral do mundo (243.000 km) e mais lagos que todos os países combinados,
-                    destaca-se por fenômenos como as marés da Baía de Fundy (atingindo 16 metros) e as Luzes do Norte em
+                    destaca-se por fenômenos como as marés da Baía de Fundy (atingindo 16 metros) e as Auroras Boreais em
                     Yellowknife. A vida selvagem inclui ursos polares em Churchill, baleias na costa da Colúmbia
-                    Britânica e alces em florestas boreais, oferecendo experiências únicas de conservação e aventura.
-                </p>
+                    Britânica e alces em florestas boreais.</p>
             </div>
             <div class="imageContainer" data-aos="fade-left">
                 <img class="informacoesCanadaImg" src="images/destaque-header-desktop-descobrir-FlorestaBoreal-1.jpg"
                     alt="Floresta Boreal">
+            </div>
+        </div>
+
+        <div class="natGaleria">
+            <div class="natGaleriaItem" data-aos="fade-up" data-aos-delay="0">
+                <img src="images/banff.jpg" alt="Banff">
+                <div class="natGaleriaLabel">Banff</div>
+            </div>
+            <div class="natGaleriaItem" data-aos="fade-up" data-aos-delay="100">
+                <img src="images/2022_MoraineLake_TravelAlberta_RothandRamberg (3).jpg" alt="Lago Moraine">
+                <div class="natGaleriaLabel">Lago Moraine</div>
+            </div>
+            <div class="natGaleriaItem" data-aos="fade-up" data-aos-delay="200">
+                <img src="images/Aerial-view-of-amazing-niagara-falls-Canada-and-United-States-of-America-.jpg" alt="Cataratas do Niágara">
+                <div class="natGaleriaLabel">Cataratas do Niágara</div>
             </div>
         </div>
     </section>
@@ -232,97 +279,92 @@
     <!-- SEÇÃO: CIDADES -->
     <section id="cidades">
         <h2 class="sectionTitle" data-aos="fade-up">Cidades</h2>
-        <div class="informacoesCanadaContainer">
-            <div class="informacoesCanada" data-aos="fade-right">
-                <h2>Vancouver</h2>
-                <p>Entre o Oceano Pacífico e as Montanhas Costeiras, Vancouver combina modernidade e natureza como
-                    nenhuma outra. Conhecida como "Hollywood do Norte" por seus estúdios de cinema, a cidade oferece
-                    desde praias urbanas até trilhas em Stanley Park (um parque 10% maior que o Central Park de NY!).
-                    Com uma população multicultural e o segundo maior Chinatown das Américas, é a porta de entrada para
-                    as Montanhas Rochosas.</p>
-            </div>
-            <div class="imageContainer" data-aos="fade-left">
-                <img class="informacoesCanadaImg" src="images/Vancouver_Skyline_and_Mountains.jpg" alt="Vancouver">
-            </div>
-        </div>
+        <div class="cidadesGrid">
 
-        <div class="informacoesCanadaContainer">
-            <div class="imageContainer" data-aos="fade-right">
-                <img class="informacoesCanadaImg" src="images/nina-stavlund-toronto-1440x956.webp" alt="Toronto">
+            <div class="cidadeCard" data-aos="fade-up" data-aos-delay="0">
+                <div class="cidadeCardImg">
+                    <img src="images/vancouver-skyline-min.webp" alt="Vancouver">
+                </div>
+                <div class="cidadeCardBody">
+                    <h3>Vancouver</h3>
+                    <p>Entre o Oceano Pacífico e as Montanhas Costeiras, Vancouver combina modernidade e natureza como
+                        nenhuma outra. Conhecida como "Hollywood do Norte", oferece desde praias urbanas até trilhas em
+                        Stanley Park — 10% maior que o Central Park de NY. É a porta de entrada para as Montanhas
+                        Rochosas.</p>
+                </div>
             </div>
-            <div class="informacoesCanada" data-aos="fade-left">
-                <h2>Toronto</h2>
-                <p>A maior cidade do Canadá é um caldeirão global: mais de 50% de seus residentes nasceram fora do
-                    país, falando mais de 180 línguas. Seu skyline é dominado pela CN Tower (553m), onde os corajosos
-                    fazem EdgeWalk a 356m de altura! Bairros como Kensington Market (feiras multicores) e Distillery
-                    District (herança vitoriana) mostram sua alma eclética.</p>
-            </div>
-        </div>
 
-        <div class="informacoesCanadaContainer">
-            <div class="informacoesCanada" data-aos="fade-right">
-                <h2>Québec City</h2>
-                <p>Única cidade fortificada ao norte do México, Quebec City transporta você à Europa sem sair da
-                    América. Patrimônio da UNESCO, suas ruas de paralelepípedos guardam o Château Frontenac (o hotel
-                    mais fotografado do mundo!) e a Place Royale, berço da Nova França (1608). No inverno, o Carnaval
-                    de Québec invade as ruas com esculturas de gelo e desfiles. Curiosidade: 95% dos moradores falam
-                    francês!</p>
+            <div class="cidadeCard" data-aos="fade-up" data-aos-delay="100">
+                <div class="cidadeCardImg">
+                    <img src="images/nina-stavlund-toronto-1440x956.webp" alt="Toronto">
+                </div>
+                <div class="cidadeCardBody">
+                    <h3>Toronto</h3>
+                    <p>A maior cidade do Canadá é um caldeirão global: mais de 50% dos residentes nasceram fora do país,
+                        falando mais de 180 línguas. Seu skyline é dominado pela CN Tower (553 m), onde os corajosos
+                        fazem o EdgeWalk a 356 m de altura.</p>
+                </div>
             </div>
-            <div class="imageContainer" data-aos="fade-left">
-                <img class="informacoesCanadaImg"
-                    src="images/01_hero_vieuxquebec_credit_destination_quebec_cite_web.webp" alt="Québec City">
+
+            <div class="cidadeCard" data-aos="fade-up" data-aos-delay="200">
+                <div class="cidadeCardImg">
+                    <img src="images/upper-town-winter-old-quebec-city-canada.avif" alt="Québec City">
+                </div>
+                <div class="cidadeCardBody">
+                    <h3>Québec City</h3>
+                    <p>Única cidade fortificada ao norte do México e Patrimônio da UNESCO. Suas ruas de paralelepípedos
+                        guardam o Château Frontenac — o hotel mais fotografado do mundo — e a Place Royale, berço da
+                        Nova França em 1608.</p>
+                </div>
             </div>
+
         </div>
     </section>
 
     <!-- SEÇÃO: GASTRONOMIA -->
     <section id="gastronomia">
         <h2 class="sectionTitle" data-aos="fade-up">Gastronomia</h2>
-        <div class="informacoesCanadaContainer">
-            <div class="informacoesCanada" data-aos="fade-right">
-                <h2>Poutine</h2>
-                <p>Nascida no Québec nos anos 1950, a poutine é a "comida de conforto" canadense por excelência:
-                    batatas fritas crocantes cobertas com queijo coalho fresco (em grãos, chamado fromage en grains) e
-                    banhadas em molho de carne quente (gravy). Reza a lenda que o prato surgiu quando um cliente pediu
-                    "uma bagunça" (poutine, em québécois) num restaurante rural. Hoje, variações gourmet incluem
-                    ingredientes como foie gras, lagosta ou até curry, mas a versão clássica é sagrada — especialmente
-                    após festas ou em dias frios. Curiosidade: Há um debate nacional sobre quem inventou a iguaria, mas
-                    Drummondville, Saint-Hyacinthe e Warwick reivindicam o título!</p>
-            </div>
-            <div class="imageContainer" data-aos="fade-left">
-                <img class="informacoesCanadaImg" src="images/La_Banquise_Poutine.jpg" alt="Poutine">
-            </div>
-        </div>
+        <div class="gastroGrid">
 
-        <div class="informacoesCanadaContainer">
-            <div class="imageContainer" data-aos="fade-right">
-                <img class="informacoesCanadaImg" src="images/_87131764_thinkstockphotos.jpg" alt="Maple Syrup">
+            <div class="gastroCard" data-aos="fade-up" data-aos-delay="0">
+                <div class="gastroCardImg">
+                    <img src="images/La_Banquise_Poutine.jpg" alt="Poutine">
+                </div>
+                <div class="gastroCardBody">
+                    <h3>Poutine</h3>
+                    <p>Nascida no Québec nos anos 1950, a poutine é a "comida de conforto" canadense por excelência:
+                        batatas fritas crocantes cobertas com queijo coalho fresco e banhadas em molho de carne quente.
+                        Hoje, versões gourmet incluem foie gras e lagosta — mas a clássica é sagrada.</p>
+                    <span class="gastroTag">Québec · Anos 1950</span>
+                </div>
             </div>
-            <div class="informacoesCanada" data-aos="fade-left">
-                <h2>Xarope de Bordo (Maple Syrup)</h2>
-                <p>Mais que um símbolo nacional, o xarope de bordo é uma tradição ancestral: povos indígenas já
-                    extraíam a seça da Acer saccharum séculos antes da colonização. O Canadá produz 75% do suprimento
-                    global, com Québec respondendo por 90% dessa produção. Entre março e abril, o ritual de "sugaring
-                    off" enche cabanas rústicas (cabanes à sucre) de famílias que fervem a seça em tachos e a
-                    transformam em xarope, tirra ou doces. Usado em panquecas, waffles e até em carnes defumadas, seu
-                    sabor terroso define a doçura canadense. Dado crucial: São necessários 40 litros de seça para fazer
-                    apenas 1 litro de xarope!</p>
-            </div>
-        </div>
 
-        <div class="informacoesCanadaContainer">
-            <div class="informacoesCanada" data-aos="fade-right">
-                <h2>Donair</h2>
-                <p>O donair é o rei das comidas de rua no Atlântico canadense — especialmente em Halifax, onde foi
-                    declarado "prato oficial da cidade" em 2015. Criado por imigrantes gregos nos anos 1970, adapta o
-                    kebab turco: carne de vitela temperada e grelhada é envolta em pão pita e regada com um molho único
-                    de leite condensado, alho e vinagre. A versão de Halifax é tão icônica que inspirou cadeias
-                    nacionais como King of Donair. Serve-se tradicionalmente após baladas ou eventos esportivos. Prova
-                    de amor local: Há até uma pizza de donair, com o molho substituindo o tomate!</p>
+            <div class="gastroCard" data-aos="fade-up" data-aos-delay="120">
+                <div class="gastroCardImg">
+                    <img src="images/_87131764_thinkstockphotos.jpg" alt="Xarope de Bordo">
+                </div>
+                <div class="gastroCardBody">
+                    <h3>Xarope de Bordo</h3>
+                    <p>O Canadá produz 75% do suprimento global de maple syrup, com Québec respondendo por 90% disso.
+                        Entre março e abril, o ritual do "sugaring off" transforma a seiva da Acer saccharum em xarope,
+                        doces e tirra. São precisos 40 litros de seiva para fazer 1 litro de xarope.</p>
+                    <span class="gastroTag">Tradição Indígena · Símbolo Nacional</span>
+                </div>
             </div>
-            <div class="imageContainer" data-aos="fade-left">
-                <img class="informacoesCanadaImg" src="images/halifax-donair.jpg" alt="Donair">
+
+            <div class="gastroCard" data-aos="fade-up" data-aos-delay="240">
+                <div class="gastroCardImg">
+                    <img src="images/halifax-donair.jpg" alt="Donair">
+                </div>
+                <div class="gastroCardBody">
+                    <h3>Donair</h3>
+                    <p>Prato oficial de Halifax desde 2015, o donair adapta o kebab turco com carne de vitela grelhada,
+                        pão pita e um molho único de leite condensado, alho e vinagre. Tão icônico que ganhou até uma
+                        versão pizza — com o molho substituindo o tomate.</p>
+                    <span class="gastroTag">Halifax · Atlântico Canadense</span>
+                </div>
             </div>
+
         </div>
     </section>
 
