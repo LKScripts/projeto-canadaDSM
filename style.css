@@ -1021,23 +1021,45 @@ section {
 /* ── Footer: referências ── */
 .footerRefs {
     background: var(--navy-dark);
-    padding: 32px clamp(20px, 6vw, 80px);
+    padding: 20px clamp(20px, 6vw, 80px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.footerRefs h5 {
+.footerRefsToggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
     color: rgba(255, 255, 255, 0.6);
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
-    margin-bottom: 14px;
+    padding: 0;
+    width: 100%;
+}
+
+.footerRefsToggle:focus {
+    outline: none;
+}
+
+.footerRefsChevron {
+    width: 14px;
+    height: 14px;
+    transition: transform 0.25s ease;
+    flex-shrink: 0;
+}
+
+.footerRefsToggle[aria-expanded="true"] .footerRefsChevron {
+    transform: rotate(180deg);
 }
 
 .footerRefs ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 14px 0 0;
     display: flex;
     flex-wrap: wrap;
     gap: 8px 24px;
@@ -1052,6 +1074,29 @@ section {
 
 .footerRefs ul li a:hover {
     color: var(--white);
+}
+
+/* ── Footer: link GitHub ── */
+.footerGithub {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    color: rgba(255, 255, 255, 0.55);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.footerGithub:hover {
+    color: var(--white);
+}
+
+.footerGithub svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
 }
 
 /* ── Responsivo: Cultura ── */

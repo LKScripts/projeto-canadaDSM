@@ -612,51 +612,54 @@
     <!-- FOOTER -->
     <footer class="footer">
         <div class="footerRefs">
-            <h5>Fontes e Referências</h5>
-            <ul>
-                <li><a href="https://www150.statcan.gc.ca/n1/daily-quotidien/250319/dq250319a-eng.htm" target="_blank"
-                        rel="noopener">Statistics Canada — Population Estimates Q4 2024</a></li>
-                <li><a href="https://parks.canada.ca/pn-np" target="_blank" rel="noopener">Parks Canada — National
-                        Parks</a></li>
-                <li><a href="https://www.nrcan.gc.ca/our-natural-resources/forests-forestry/boreal-forest/13071"
-                        target="_blank" rel="noopener">Natural Resources Canada — Boreal Forest</a></li>
-                <li><a href="https://en.wikipedia.org/wiki/CN_Tower" target="_blank" rel="noopener">Wikipedia — CN Tower
-                        (553 m)</a></li>
-                <li><a href="https://en.wikipedia.org/wiki/Ch%C3%A2teau_Frontenac" target="_blank"
-                        rel="noopener">Wikipedia — Château Frontenac (hotel mais fotografado)</a></li>
-                <li><a href="https://montrealjazzfest.com/en" target="_blank" rel="noopener">Festival International de
-                        Jazz de Montréal (Guinness, 2004)</a></li>
-                <li><a href="https://en.wikipedia.org/wiki/Bay_of_Fundy" target="_blank" rel="noopener">Wikipedia — Bay
-                        of Fundy (marés de 16 m)</a></li>
-                <li><a href="https://dailyhive.com/vancouver/stanley-park-vs-central-park" target="_blank"
-                        rel="noopener">DailyHive — Stanley Park vs Central Park</a></li>
-                <li><a href="https://en.wikipedia.org/wiki/Ice_hockey_in_Canada" target="_blank"
-                        rel="noopener">Wikipedia — Hóquei no Gelo como esporte nacional</a></li>
-                <li><a href="https://agriculture.canada.ca/en/sector/horticulture/maple" target="_blank"
-                        rel="noopener">Agriculture Canada — Maple Syrup (75% da produção mundial)</a></li>
-                <li><a href="https://en.wikipedia.org/wiki/Poutine" target="_blank"
-                        rel="noopener">Wikipedia — Poutine (origem no Québec, anos 1950)</a></li>
-                <li><a href="https://en.wikipedia.org/wiki/Donair" target="_blank"
-                        rel="noopener">Wikipedia — Donair (prato oficial de Halifax desde 2015)</a></li>
-                <li><a href="https://en.wikipedia.org/wiki/BeaverTails" target="_blank"
-                        rel="noopener">Wikipedia — BeaverTails (Ottawa, desde 1978)</a></li>
-                <li><a href="https://pt.wikipedia.org/wiki/Xarope_de_%C3%A1cer" target="_blank"
-                        rel="noopener">Wikipédia — Xarope de Ácer (proporção seiva/xarope)</a></li>
-                <li><a href="https://en.wikipedia.org/wiki/Stanley_Park" target="_blank"
-                        rel="noopener">Wikipedia — Stanley Park (Vancouver)</a></li>
-                <li><a href="https://pt.wikipedia.org/wiki/Demografia_de_Toronto" target="_blank"
-                        rel="noopener">Wikipédia — Demografia de Toronto (diversidade linguística)</a></li>
-                <li><a href="https://whc.unesco.org/en/list/300/" target="_blank"
-                        rel="noopener">UNESCO — Distrito Histórico de Québec (Patrimônio Mundial)</a></li>
-                <li><a href="https://ncc-ccn.gc.ca/places/rideau-canal-skateway" target="_blank"
-                        rel="noopener">National Capital Commission — Canal Rideau Skateway (Ottawa)</a></li>
-                <li><a href="https://pier21.ca/research/immigration-history/canadian-multiculturalism-policy-1971"
-                        target="_blank" rel="noopener">Pier 21 — Política Canadense de Multiculturalismo (1971)</a></li>
-                <li><a href="https://pt.wikipedia.org/wiki/Povos_amer%C3%ADndios_do_Canad%C3%A1" target="_blank"
-                        rel="noopener">Wikipédia — Povos Ameríndios do Canadá (630+ comunidades)</a></li>
-                <li><a href="https://pt.wikipedia.org/wiki/Genoc%C3%ADdio_canadense_de_povos_ind%C3%ADgenas"
-                        target="_blank" rel="noopener">Wikipédia — Genocídio Canadense de Povos Indígenas (2021)</a></li>
-            </ul>
+            <button class="footerRefsToggle" data-toggle="collapse" data-target="#refsList" aria-expanded="false">
+                Fontes e Referências
+                <svg class="footerRefsChevron" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <div class="collapse" id="refsList">
+                <ul>
+                    <li><a href="https://www150.statcan.gc.ca/n1/daily-quotidien/250319/dq250319a-eng.htm" target="_blank"
+                            rel="noopener">Statistics Canada — Population Estimates Q4 2024</a></li>
+                    <li><a href="https://parks.canada.ca/pn-np" target="_blank" rel="noopener">Parks Canada — National Parks</a></li>
+                    <li><a href="https://www.nrcan.gc.ca/our-natural-resources/forests-forestry/boreal-forest/13071"
+                            target="_blank" rel="noopener">Natural Resources Canada — Boreal Forest</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/CN_Tower" target="_blank" rel="noopener">Wikipedia — CN Tower (553 m)</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Ch%C3%A2teau_Frontenac" target="_blank"
+                            rel="noopener">Wikipedia — Château Frontenac (hotel mais fotografado)</a></li>
+                    <li><a href="https://montrealjazzfest.com/en" target="_blank" rel="noopener">Festival International de Jazz de Montréal (Guinness, 2004)</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Bay_of_Fundy" target="_blank" rel="noopener">Wikipedia — Bay of Fundy (marés de 16 m)</a></li>
+                    <li><a href="https://dailyhive.com/vancouver/stanley-park-vs-central-park" target="_blank"
+                            rel="noopener">DailyHive — Stanley Park vs Central Park</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Ice_hockey_in_Canada" target="_blank"
+                            rel="noopener">Wikipedia — Hóquei no Gelo como esporte nacional</a></li>
+                    <li><a href="https://agriculture.canada.ca/en/sector/horticulture/maple" target="_blank"
+                            rel="noopener">Agriculture Canada — Maple Syrup (75% da produção mundial)</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Poutine" target="_blank"
+                            rel="noopener">Wikipedia — Poutine (origem no Québec, anos 1950)</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Donair" target="_blank"
+                            rel="noopener">Wikipedia — Donair (prato oficial de Halifax desde 2015)</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/BeaverTails" target="_blank"
+                            rel="noopener">Wikipedia — BeaverTails (Ottawa, desde 1978)</a></li>
+                    <li><a href="https://pt.wikipedia.org/wiki/Xarope_de_%C3%A1cer" target="_blank"
+                            rel="noopener">Wikipédia — Xarope de Ácer (proporção seiva/xarope)</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Stanley_Park" target="_blank"
+                            rel="noopener">Wikipedia — Stanley Park (Vancouver)</a></li>
+                    <li><a href="https://pt.wikipedia.org/wiki/Demografia_de_Toronto" target="_blank"
+                            rel="noopener">Wikipédia — Demografia de Toronto (diversidade linguística)</a></li>
+                    <li><a href="https://whc.unesco.org/en/list/300/" target="_blank"
+                            rel="noopener">UNESCO — Distrito Histórico de Québec (Patrimônio Mundial)</a></li>
+                    <li><a href="https://ncc-ccn.gc.ca/places/rideau-canal-skateway" target="_blank"
+                            rel="noopener">National Capital Commission — Canal Rideau Skateway (Ottawa)</a></li>
+                    <li><a href="https://pier21.ca/research/immigration-history/canadian-multiculturalism-policy-1971"
+                            target="_blank" rel="noopener">Pier 21 — Política Canadense de Multiculturalismo (1971)</a></li>
+                    <li><a href="https://pt.wikipedia.org/wiki/Povos_amer%C3%ADndios_do_Canad%C3%A1" target="_blank"
+                            rel="noopener">Wikipédia — Povos Ameríndios do Canadá (630+ comunidades)</a></li>
+                    <li><a href="https://pt.wikipedia.org/wiki/Genoc%C3%ADdio_canadense_de_povos_ind%C3%ADgenas"
+                            target="_blank" rel="noopener">Wikipédia — Genocídio Canadense de Povos Indígenas (2021)</a></li>
+                </ul>
+            </div>
         </div>
         <div class="footerContent">
             <div class="flagFooterContainer">
@@ -685,6 +688,13 @@
             </div>
             <h4>Projeto Volta ao Mundo - Canadá</h4>
             <p class="copyright">Desenvolvido por Lucas Simões - 2025</p>
+            <a href="https://github.com/LKScripts" target="_blank" rel="noopener" class="footerGithub">
+                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                LKScripts
+            </a>
+
         </div>
         </div>
     </footer>
