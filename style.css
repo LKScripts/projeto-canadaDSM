@@ -256,17 +256,11 @@ section {
 }
 
 .informacoesCanadaContainer {
-    display: flex;
-    max-width: 100%;
-    margin: auto;
     background: inherit;
     overflow: hidden;
-    margin-top: 0;
-    gap: 0;
 }
 
 .informacoesCanada {
-    flex: 0 0 50%;
     padding: clamp(28px, 5vw, 64px);
     background: inherit;
     display: flex;
@@ -298,7 +292,6 @@ section {
 }
 
 .imageContainer {
-    flex: 0 0 50%;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -375,8 +368,6 @@ section {
 
 /* ── Stats: Tier 2 — detail row ── */
 .statsDetailRow {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     background: var(--white);
     border-bottom: 3px solid var(--bg-light);
 }
@@ -390,7 +381,7 @@ section {
     border-bottom: 1px solid #e8eef6;
 }
 
-.statDetail:nth-child(3n) {
+.statDetail:last-child {
     border-right: none;
 }
 
@@ -526,18 +517,6 @@ section {
         padding: 36px 24px;
     }
 
-    .statsDetailRow {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .statDetail:nth-child(3n) {
-        border-right: 1px solid #e8eef6;
-    }
-
-    .statDetail:nth-child(2n) {
-        border-right: none;
-    }
-
     .navbar {
         height: auto;
         flex-wrap: wrap;
@@ -601,16 +580,6 @@ section {
         border-bottom-color: transparent;
     }
 
-    .informacoesCanadaContainer {
-        flex-direction: column;
-    }
-
-    .informacoesCanada,
-    .imageContainer {
-        flex: 0 0 100%;
-        width: 100%;
-    }
-
     .imageContainer {
         height: 400px;
     }
@@ -632,10 +601,6 @@ section {
     .navLinks a {
         font-size: 16px;
         padding: 6px 12px;
-    }
-
-    .statsDetailRow {
-        grid-template-columns: 1fr;
     }
 
     .statDetail {
@@ -772,11 +737,8 @@ section {
     margin: 0;
 }
 
-/* ── Gastronomia: grid de 3 cards verticais ── */
+/* ── Gastronomia: grid de cards ── */
 .gastroGrid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0;
     padding-bottom: 56px;
 }
 
@@ -862,10 +824,6 @@ section {
         height: 200px;
     }
 
-    .gastroGrid {
-        grid-template-columns: 1fr;
-    }
-
     .gastroCard {
         border-right: none;
         border-bottom: 1px solid #e2eaf4;
@@ -938,18 +896,8 @@ section {
     height: 20px;
 }
 
-/* ── Gastronomia: 4 cards — 2 colunas em telas médias ── */
-@media (min-width: 992px) {
-    .gastroGrid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
 /* ── Cultura: grid de cards ── */
 .culturaGrid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0;
     padding-bottom: 56px;
 }
 
@@ -1101,10 +1049,6 @@ section {
 
 /* ── Responsivo: Cultura ── */
 @media (max-width: 991px) {
-    .culturaGrid {
-        grid-template-columns: 1fr;
-    }
-
     .culturaCard {
         border-right: none;
         border-bottom: 1px solid #e2eaf4;
